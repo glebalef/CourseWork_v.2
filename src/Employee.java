@@ -4,8 +4,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class Employee {
     private String name;
-    private int salary;
-    private String department;
+    private double salary;
+    private int department;
 
     private final int id;
     private static int counter;
@@ -15,7 +15,7 @@ public class Employee {
         return counter;
     }
 
-    public Employee (String name, String department, int salary) {
+    public Employee (String name, int department, float salary) {
 
         this.id = counterMaker();
         this.name = name;
@@ -28,11 +28,11 @@ public class Employee {
         return name;
     }
 
-    public int getSalary() {
+    public double getSalary() {
         return salary;
     }
 
-    public void setSalary(int salary) {
+    public void setSalary(double salary) {
         this.salary = salary;
     }
 
@@ -40,11 +40,11 @@ public class Employee {
         return id;
     }
 
-    public String getDepartment() {
+    public int getDepartment() {
         return department;
     }
 
-    public void setDepartment(String department) {
+    public void setDepartment(int department) {
         this.department = department;
 
     }
